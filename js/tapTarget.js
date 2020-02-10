@@ -142,7 +142,7 @@
         this.wrapper = document.createElement('div');
         this.wrapper.classList.add('tap-target-wrapper');
         this.$el.before($(this.wrapper));
-        this.wrapper.append(this.el);
+        $(this.wrapper).append(this.el);
       }
 
       // Creating content
@@ -164,10 +164,10 @@
           this.originEl.removeAttr('id');
           this.originEl.removeAttr('style');
           this.originEl = this.originEl[0];
-          this.waveEl.append(this.originEl);
+          $(this.waveEl).append(this.originEl);
         }
 
-        this.wrapper.append(this.waveEl);
+        $(this.wrapper).append(this.waveEl);
       }
     }
 
